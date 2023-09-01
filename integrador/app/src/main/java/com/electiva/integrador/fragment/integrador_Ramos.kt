@@ -37,10 +37,14 @@ class integrador_Ramos : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        val inputText1=editText1.text.toString()
-        val inputText2=editText2.text.toString()
-        val comparisionResult= viewModel.characterString(inputText1,inputText2)
-        textView.text=comparisionResult
+        button.setOnClickListener{
+
+            val inputText1=editText1.text.toString()
+            val inputText2=editText2.text.toString()
+            textView.text=viewModel.characterString(inputText1,inputText2)
+
+        }
+
 
     }
 
